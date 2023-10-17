@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 15px;
+  background-color: #0a0c1b;
+  display: flex;
+    justify-content:center ;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+  margin-top: 30px;
+  display: flex;
+  background-color: #1c1938;
+  border-radius: 10px;
+  width: 60%;
+}
+@media (max-width: 767px) {
+  .card {
+    flex-direction: column-reverse;
+    width: 90%;
+  }
+}
+
+.card .left-side {
+  width: 50%;
+  padding: 60px 60px 40px 60px;
+  color: hsl(0, 0%, 100%);
+  font-family: "Inter", sans-serif;
+}
+@media (max-width: 767px) {
+  .card .left-side {
+    width: 100%;
+    text-align: center;
+    padding: 30px 10px;
+  }
+  .card .left-side p {
+    display: inline-block;
+    width:100%;
+  }
+}
+.card .left-side h1 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.card .left-side h1 span {
+  color: #ad5bdb;
+}
+
+.card .left-side p {
+  line-height: 1.6;
+  width: 85%;
+  color: #9593a9;
+  font-size: 15px;
+}
+
+.card .left-side .statics {
+  width: 85%;
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .card .left-side .statics {
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 30px;
+    width: 100%;
+  }
+}
+
+.card .left-side .statics .line {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card .left-side .statics .line span:first-child {
+  font-weight: 700;
+  font-size: 25px;
+  color: hsl(0, 0%, 100%);
+}
+
+.card .left-side .statics .line span:last-child {
+  color: hsla(0, 0%, 100%, 0.6);
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.card .image {
+  width: 50%;
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  min-height: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.card .image::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: hsl(277deg 64% 61% / 60%);
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+@media (max-width: 767px) {
+    .card .image {
+      width: 100%;
+    }
+    .card img {
+      width: 100%;
+      height: 250px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 10px;
+    }
+    .card .image::before {
+        width: 100%;
+        height: 250px;
+        border-bottom-right-radius: 0px;
+      border-top-left-radius: 10px;
+    }
+  }
